@@ -1,0 +1,6 @@
+.MoreInfo header {
+  background-image: url('/public/plants.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
