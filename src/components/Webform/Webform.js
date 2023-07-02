@@ -1,0 +1,208 @@
+import { useEffect } from "react"
+import Logo from "../Logo/Logo"
+
+import "./Webform.css"
+
+export default function Webform() {
+  useEffect(() => {
+    const form = document.getElementById("gfc-form")
+    form.addEventListener("submit", function (e) {
+      e.preventDefault()
+      const data = new FormData(form)
+      const action = e.target.action
+      fetch(action, {
+        method: "POST",
+        body: data,
+      }).then(() => {
+        alert("Success! Your application has been received 🥳")
+      })
+    })
+  }, [])
+
+  return (
+    <div className="Webform">
+      <div className="header fixed-top d-flex align-items-center mb-5">
+        <Logo display="inline" breakpoint="xsm" />
+        <h1 className="h1 p-2">Join the Go Full Circle learning community</h1>
+      </div>
+      <div className="form-content container">
+        <form
+          className="gfc-form col-lg-10 col-xlg-8 m-auto"
+          id="gfc-form"
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycbyUwm48Il0PxnjhdaJV_iOu8m6vFNo8DhxVgksZFC8QW24xszTk-2FMSh8ifw7FaIApMg/exec?authuser=0"
+        >
+          <div className="my-details form-section m-3 mb-5">
+            <h4>My contact details</h4>
+
+            <div className="input-group question mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text">First name</span>
+              </div>
+              <input
+                required
+                name="FirstName"
+                type="text"
+                placeholder="First name"
+                className="form-control input-field text-input-field"
+              />
+            </div>
+
+            <div className="input-group question mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text">Last name</span>
+              </div>
+              <input
+                required
+                name="LastName"
+                type="text"
+                placeholder="Last name"
+                className="form-control input-field text-input-field"
+              />
+            </div>
+
+            <div className="input-group question mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text">Phone</span>
+              </div>
+              <input
+                required
+                name="Phone"
+                type="text"
+                placeholder="Phone number"
+                className="form-control input-field text-input-field"
+              />
+            </div>
+
+            <div className="input-group question mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text">Email</span>
+              </div>
+              <input
+                required
+                name="Email"
+                type="email"
+                placeholder="your@email.address"
+                className="form-control input-field text-input-field"
+              />
+            </div>
+          </div>
+
+          <div className="my-business-details form-section m-3 mb-5">
+            <h4>My business</h4>
+
+            <div className="input-group question mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text">Business name</span>
+              </div>
+              <input
+                required
+                name="BusinessName"
+                type="text"
+                placeholder="Business name"
+                className="form-control input-field text-input-field"
+              />
+            </div>
+
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <label className="input-group-text" htmlFor="BusinessType">
+                  Business type
+                </label>
+              </div>
+              <select
+                required
+                name="BusinessType"
+                id="BusinessType"
+                className="custom-select input-field select-input-field"
+                defaultValue={"NotSelected"}
+              >
+                <option disabled value="NotSelected">
+                  Select an option...
+                </option>
+                <option value="Retail">Retail</option>
+                <option value="Hospitality">Hospitality</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <label className="input-group-text" htmlFor="BusinessSize">
+                  Number of employees
+                </label>
+              </div>
+              <select
+                required
+                name="BusinessSize"
+                id="BusinessSize"
+                className="custom-select input-field select-input-field"
+                defaultValue={"NotSelected"}
+              >
+                <option disabled value="NotSelected">
+                  Select an option...
+                </option>
+                <option value="1-5">1-5</option>
+                <option value="6-10">6-10</option>
+                <option value="11+">11+</option>
+              </select>
+            </div>
+
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <label className="input-group-text" htmlFor="LGA">
+                  Business location
+                </label>
+              </div>
+              <select
+                required
+                name="LGA"
+                id="LGA"
+                className="custom-select input-field select-input-field"
+                defaultValue={"NotSelected"}
+              >
+                <option disabled value="NotSelected">
+                  Select an option...
+                </option>
+                <option value="City of Melbourne LGA">
+                  City of Melbourne LGA
+                </option>
+                <option value="City of Stonnington LGA">
+                  City of Stonnington LGA
+                </option>
+                <option value="City of Boroondara LGA">
+                  City of Boroondara LGA
+                </option>
+                <option value="Other area">Other area</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="form-section submit-form m-3 mb-5">
+            <h4>My goals</h4>
+            <div className="input-group question mb-3">
+              <textarea
+                required
+                name="Aims"
+                placeholder="Briefly describe what you hope to get out of the Go Full Circle course"
+                className="form-control input-field textarea-input-field"
+              />
+            </div>
+          </div>
+
+          <div className="form-section submit-form m-3">
+            <h4>Join the community!</h4>
+            <p>
+              Thanks for your interest in Go Full Circle 2023. Click 'register
+              me' when you have completed the form.
+            </p>
+            <button className="btn btn-primary mb-3" type="submit">
+              Register me
+            </button>
+            <p>Thank you!</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  )
+}
