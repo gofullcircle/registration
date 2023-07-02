@@ -1,7 +1,7 @@
 {
-  "name": "gfc-test-form",
-  "homepage": "https://jondrews.github.io/gfc-test-form/",
-  "version": "0.2.0",
+  "name": "gfc-registration",
+  "homepage": "https://gofullcircle.github.io/",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
