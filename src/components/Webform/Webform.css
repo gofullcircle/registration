@@ -9,7 +9,7 @@
 }
 
 .Webform .header {
-  background-image: url('/public/cafe.jpg');
+  background-image: url('/public/header1.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(180%);
@@ -17,4 +17,8 @@
 
 .Webform .header h1 {
   background: rgba(255, 255, 255, 0.4);
+}
+
+.Webform .inactive {
+  color: gray;
 }
