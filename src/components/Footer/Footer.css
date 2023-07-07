@@ -1,8 +1,17 @@
 .Footer {
   margin: 3em 0 0 0;
-  min-height: 200px;
+  padding: 5em 20px 20px 20px;
+  min-height: 400px;
   background-color: #333;
   color: #fff;
-  padding: 20px;
   text-align: center;
+}
+
+.Footer .acknowledgement {
+  font-size: smaller;
+}
+
+.Footer .logos img {
+  height: 100px;
+  width: auto;
 }

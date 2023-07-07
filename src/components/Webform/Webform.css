@@ -1,24 +1,67 @@
-.Webform .form-content {
-  margin-top: 200px;
+.Webform header {
+  background-image: url('/public/header1.png');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
 }
 
 .Webform .form-section {
   border-radius: 10px;
-  padding: 20px;
   background: rgb(200, 216, 200);
 }
 
-.Webform .header {
-  background-image: url('/public/header1.jpg');
-  background-size: cover;
-  background-position: center;
-  filter: brightness(180%);
+.Webform .section-header {
+  border-radius: 10px 10px 0 0;
+  background: rgb(169, 193, 169);
 }
 
-.Webform .header h1 {
-  background: rgba(255, 255, 255, 0.4);
+.Webform .section-title {
+  padding: 20px;
+}
+
+.Webform .questions-container {
+  padding: 20px;
+  margin-left: 1em;
 }
 
 .Webform .inactive {
   color: gray;
+}
+
+.Webform .question {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.Webform .prompt {
+  font-size: 1.2em;
+}
+
+.Webform fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.Webform fieldset .option-label-pair {
+  display: flex;
+  align-items: baseline;
+  margin-left: 1em;
+}
+
+.Webform .option-label-pair input[type="radio"],input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+.Webform .option-label-othertext input[type="radio"],input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+.Webform .option-label-othertext {
+  display: flex;
+  align-items: baseline;
+  margin-left: 1em;
+}
+.Webform fieldset .option-label-othertext input[type="text"]{
+  flex-grow: 1;
+  margin-left: 0.5em;
 }

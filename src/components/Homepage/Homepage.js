@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 import Logo from "../Logo/Logo"
 import "./Homepage.css"
@@ -22,7 +22,13 @@ export default function Homepage() {
                   Go Full Circle 2023
                 </h1>
               </div>
-              <p>
+              <h2>
+                Unleash the Power of the Circular Economy: Adapting Your
+                Business for the Future
+              </h2>
+              <br></br>
+              <h3>About the program:</h3>
+              <p className="intro-copy justify">
                 Introducing the Go Full Circle program, a tailor-made program
                 for local businesses to revolutionise their operations and
                 unlock environmental, social and financial advantages. <br />
@@ -43,6 +49,93 @@ export default function Homepage() {
                 ensuring you walk away with a strategy, hands-on learning
                 experience and a community of like minded businesses to support
                 you into the future.
+                <br />
+                <br />
+                Each participant will be provided with a one-hour 1 on 1 session
+                with a course facilitator to provide additional assistance
+                throughout their learning journey. 1 on 1 sessions are available
+                in the second half of the course, and will be confirmed on an
+                individual basis.
+              </p>
+
+              <br></br>
+
+              <h3>Who is this course for?</h3>
+              <ul>
+                <li>
+                  For businesses located in Melbourne, Stonnington or Boroondara
+                  Council Area(s)
+                </li>
+                <li>
+                  This course is designed for owners or staff with the ability
+                  to implement new practices in their business
+                </li>
+                <li>
+                  It has been designed predominantly for businesses from the
+                  hospitality and retail sectors, however we encourage all
+                  businesses to apply
+                </li>
+                <li>
+                  This is designed to be an online experience. Participants will
+                  need to have a computer or tablet with a microphone and camera
+                  that can support Zoom
+                </li>
+              </ul>
+
+              <br></br>
+
+              <h3>Reasons to do this course:</h3>
+              <div className="reason">
+                <b className="reason-header">Ignite Innovation</b>
+                <p className="reason-text">
+                  Discover real and tangible circular opportunities to create
+                  value and practice using the tools needed to successfully
+                  implement them within your business.
+                </p>
+              </div>
+              <div className="reason">
+                <b className="reason-header">Collaborative Transformation</b>
+                <p className="reason-text">
+                  Collaborate with others and learn how to apply circular design
+                  tools to real business environments, revealing fresh
+                  perspectives and effective approaches to tackling challenges.
+                  Forge connections with like-minded businesses and local
+                  councils, forming a supportive network that assists your
+                  journey towards circularity.
+                </p>
+              </div>
+              <div className="reason">
+                <b className="reason-header">
+                  Thrive Economically and Improve Patronage
+                </b>
+                <p className="reason-text">
+                  Explore where and how you can apply substantial cost savings
+                  through waste reduction and minimisation, or create new
+                  revenue streams, while attracting and retaining customers who
+                  value responsible businesses.
+                </p>
+              </div>
+              <div className="reason">
+                <b className="reason-header">Attract & Retain Top Talent</b>
+                <p className="reason-text">
+                  Showcase your dedication to the planet: attract and retain
+                  exceptional staff members who take pride in your improved
+                  mission for the environment.{" "}
+                </p>
+              </div>
+              <div className="reason">
+                <b className="reason-header">Future-Proof Your Success</b>
+                <p className="reason-text">
+                  Safeguard your supply chains and your business's resilience in
+                  the face of ever-changing requirements.
+                </p>
+              </div>
+              <br></br>
+              <p className="intro-copy justify">
+                Join us in reshaping the future of business, as we empower you
+                to embrace the circular economy and propel your company to
+                better practices. Enrol in the Go Full Circle program today and unlock boundless
+                possibilities for a brighter, sustainable tomorrow!
               </p>
 
               <div className="actions">
@@ -52,9 +145,6 @@ export default function Homepage() {
                 >
                   Register now
                 </button>
-                <Link to="/info" className="readmore-link m-3">
-                  Read more...
-                </Link>
               </div>
             </div>
           </div>

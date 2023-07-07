@@ -1,6 +1,22 @@
 .Homepage header {
-  background-image: url('/public/header1.jpg');
+  background-image: url('/public/header1.png');
   background-size: cover;
   background-position: center;
   height: 300px;
+}
+
+.Homepage .justify {
+  text-align: justify;
+}
+
+.Homepage h2 {
+  text-align: center;
+}
+
+.Homepage li {
+  margin-bottom: 0.5em;
+}
+
+.Homepage .reason-text {
+  margin-left: 2em;
 }
