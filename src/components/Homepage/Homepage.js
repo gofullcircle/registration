@@ -11,13 +11,14 @@ export default function Homepage() {
       <header></header>
       <div className="container">
         <div className="row">
-          <div className="col-md-4 d-none d-md-inline">
+          {/* <div className="col-md-4 d-none d-md-inline">
             <Logo display={"block"} />
-          </div>
-          <div className="col-md-8">
+          </div> */}
+          <div className="d-none d-md-block col-md-1 col-lg-2"></div>
+          <div className="col-12 col-md-10 col-lg-8">
             <div className="course-description">
               <div className="title-container d-flex">
-                <Logo display={"inline"} breakpoint={"md"} />
+                {/* <Logo display={"inline"} breakpoint={"md"} /> */}
                 <h1 className="h1 course-title m-auto p-3">
                   Go Full Circle 2023
                 </h1>
@@ -148,6 +149,7 @@ export default function Homepage() {
               </div>
             </div>
           </div>
+          <div className="d-none d-md-block col-md-1 col-lg-2"></div>
         </div>
       </div>
     </div>
