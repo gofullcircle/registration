@@ -1,3 +1,12 @@
 .App {
   text-align: left;
 }
+
+header {
+  background-image: url('/public/header1.png');
+  background-size: cover;
+  background-position: center;
+  height: 35vw;
+  min-height: 100px;
+  max-height: min(40vh, 300px);
+}

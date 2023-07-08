@@ -11,7 +11,16 @@
   font-size: smaller;
 }
 
+/* .Footer .logos {
+  border: 1px solid rgb(255, 144, 162);
+} */
+
 .Footer .logos img {
-  height: 100px;
+  display: inline-block;
+  margin: 5px;
+  height: 10vw;
+  min-height: 60px;
+  max-height: 120px;
   width: auto;
+  /* border: 1px solid yellow; */
 }

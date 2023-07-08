@@ -10,34 +10,46 @@ export default function Footer() {
     <div className="Footer">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 logos mt-5 h-100 d-flex justify-content-around">
+          <div className="col-lg-6 h-25 logos mt-5 d-flex justify-content-center flex-wrap">
             <a
               href="https://www.melbourne.vic.gov.au/Pages/home.aspx"
               target="_blank"
               rel="noreferrer"
             >
-              <img alt="City of Melbourne logo" src={CoMlogo}></img>
+              <img
+                alt="City of Melbourne logo"
+                src={CoMlogo}
+              ></img>
             </a>{" "}
             <a
               href="https://www.stonnington.vic.gov.au/Home"
               target="_blank"
               rel="noreferrer"
             >
-              <img alt="City of Stonnington logo" src={CoSlogo}></img>
+              <img
+                alt="City of Stonnington logo"
+                src={CoSlogo}
+              ></img>
             </a>
             <a
               href="https://www.boroondara.vic.gov.au/"
               target="_blank"
               rel="noreferrer"
             >
-              <img alt="City of Boroondara logo" src={CoBlogo}></img>
+              <img
+                alt="City of Boroondara logo"
+                src={CoBlogo}
+              ></img>
             </a>
             <a
               href="https://cirquedusoil.com.au/"
               target="_blank"
               rel="noreferrer"
             >
-              <img alt="Cirque du Soil logo" src={CdSlogo}></img>
+              <img
+                alt="Cirque du Soil logo"
+                src={CdSlogo}
+              ></img>
             </a>
           </div>
           <div className="col-lg-6 acknowledgement mt-5 h-100">
