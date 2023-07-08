@@ -59,12 +59,12 @@ export default function Webform() {
     <div className="Webform">
       <header></header>
 
-      <div className="form-content container">
+      <div className="form-content m-0 p-0">
         <h1 className="h1 m-3 mb-5">
           Register your interest in the Go Full Circle 2023 course
         </h1>
         <form
-          className="gfc-form col-lg-10 col-xlg-8 m-auto"
+          className="gfc-form col-12 col-md-10 col-lg-8 col-xlg-6 m-auto"
           id="gfc-form"
           method="POST"
           action="https://script.google.com/macros/s/AKfycbyhtjwCStAprSdNmNKrz97ohws3h78qpmXU8kS8JWdqYqKFdBvRW9qAzGESDTNGVjjNgw/exec?authuser=0"

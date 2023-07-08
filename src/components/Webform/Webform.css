@@ -51,10 +51,15 @@
 
 .Webform .option-label-othertext {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   margin-left: 1em;
 }
+.Webform .option-label-othertext label {
+  /* flex-grow: 1; */
+  white-space: nowrap;
+}
 .Webform fieldset .option-label-othertext input[type="text"]{
-  flex-grow: 1;
+  /* flex-grow: 1; */
   margin-left: 0.5em;
 }
