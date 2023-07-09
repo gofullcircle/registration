@@ -1,8 +1,8 @@
 import React from "react"
 import "./Footer.css"
 import CoMlogo from "../../CoMlogo.jpg"
-import CoSlogo from "../../CoSlogo.jpg"
-import CoBlogo from "../../CoBlogo.jpeg"
+import CoSlogo from "../../CoStransparent.png"
+import CoBlogo from "../../CoBtransparent.png"
 import CdSlogo from "../../CdSlogo.png"
 
 export default function Footer() {
