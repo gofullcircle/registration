@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.ca3b6355.css",
-    "main.js": "/static/js/main.876e5b63.js",
-    "static/media/header1.png": "/static/media/header1.d6ad263f5faad23c9e44.png",
-    "static/media/CoMlogo.jpg": "/static/media/CoMlogo.558d4d5ed66a3b95294c.jpg",
-    "static/media/CoStransparent.png": "/static/media/CoStransparent.0287515f23df51db43b5.png",
-    "static/media/CoBtransparent.png": "/static/media/CoBtransparent.1abd598d695e1b11686a.png",
-    "static/media/CdSlogo.png": "/static/media/CdSlogo.26c10992ebbc8c2b8a9c.png",
+    "main.css": "/static/css/main.16352bf7.css",
+    "main.js": "/static/js/main.93dfe8b9.js",
+    "static/media/header1.png": "/static/media/header1.1ebeb0b01a3caf2ceea6.png",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
+    "static/media/CoStransparent.png": "/static/media/CoStransparent.7cfee60565e2989cc7d6.png",
+    "static/media/CoMtransparent.png": "/static/media/CoMtransparent.ccaea2440f609dc0631f.png",
+    "static/media/CoBtransparent.png": "/static/media/CoBtransparent.f8b5c7d47fa16c8779d4.png",
+    "static/media/CdSlogo.png": "/static/media/CdSlogo.e871d1e6cb0e281b82f2.png",
     "index.html": "/index.html",
-    "main.ca3b6355.css.map": "/static/css/main.ca3b6355.css.map",
-    "main.876e5b63.js.map": "/static/js/main.876e5b63.js.map"
+    "main.16352bf7.css.map": "/static/css/main.16352bf7.css.map",
+    "main.93dfe8b9.js.map": "/static/js/main.93dfe8b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca3b6355.css",
-    "static/js/main.876e5b63.js"
+    "static/css/main.16352bf7.css",
+    "static/js/main.93dfe8b9.js"
   ]
 }
