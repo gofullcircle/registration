@@ -46,6 +46,11 @@
   margin-left: 1em;
 }
 
+.Webform input[type="checkbox"],input[type="radio"] {
+  min-width: 15px;
+  height: auto;
+}
+
 .Webform .option-label-pair input[type="radio"],input[type="checkbox"] {
   margin-right: 0.5em;
 }
@@ -66,6 +71,10 @@
 .Webform fieldset .option-label-othertext input[type="text"]{
   /* flex-grow: 1; */
   margin-left: 0.5em;
+}
+
+.Webform .hidden {
+  display: none;
 }
 
 .Webform #submit-button {

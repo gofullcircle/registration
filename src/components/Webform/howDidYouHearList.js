@@ -1,14 +1,16 @@
 const howDidYouHearList = [
-  "City of Boroondara website",
-  "City of Boroondara social media (Facebook, Instagram, LinkedIn)",
-  "City of Boroondara e-newsletter",
-  "City of Melbourne website",
-  "City of Melbourne social media (Facebook, Instagram, LinkedIn)",
-  "City of Melbourne e-newsletter",
-  "City of Stonnington website",
-  "City of Stonnington social media (Facebook, Instagram, LinkedIn)",
-  "City of Stonnington e-newsletter",
   "Cirque du Soil",
+  "City of Stonnington Website",
+  "City of Stonnington Social Media (Linkedin, Facebook, Instagram)",
+  "City of Stonnington Newsletter",
+  "City of Stonnington Business Concierge",
+  "City of Boroondara Website",
+  "City of Boroondara Social Media (Linkedin, Facebook, Instagram)",
+  "City of Boroondara Newsletter",
+  "City of Melbourne Website",
+  "City of Melbourne Social Media (Linkedin, Facebook, Instagram)",
+  "City of Melbourne Newsletter",
+  "Other",
 ]
 
 export default howDidYouHearList

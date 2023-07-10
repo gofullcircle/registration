@@ -142,6 +142,7 @@ export default function Homepage() {
               <div className="actions">
                 <button
                   className="btn btn-primary"
+                  id="apply-now-button"
                   onClick={() => navigate("/signup")}
                 >
                   Apply now

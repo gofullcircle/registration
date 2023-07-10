@@ -13,3 +13,8 @@
 .Homepage .reason-text {
   margin-left: 2em;
 }
+
+.Homepage #apply-now-button {
+  background: #005344;
+  border-color: #21A07C;
+}

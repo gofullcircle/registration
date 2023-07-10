@@ -36,6 +36,18 @@ export default function Webform() {
     }
   }
 
+  function otherSelectOption(e, textFieldId) {
+    var otherTextInput = document.getElementById(textFieldId)
+    if (e.target.value === "Other") {
+      otherTextInput.required = true
+      otherTextInput.classList.remove("hidden")
+    } else {
+      otherTextInput.required = false
+      otherTextInput.classList.add("hidden")
+      otherTextInput.value = ""
+    }
+  }
+
   useEffect(() => {
     const form = document.getElementById("gfc-form")
     form.addEventListener("submit", function (e) {
@@ -377,14 +389,17 @@ export default function Webform() {
                 </fieldset>
               </div>
 
-              <div className="question multi-choice-with-other mb-3">
+              {/* <div className="question multi-choice-with-other mb-3">
                 <fieldset>
                   <legend className="prompt multi-choice-prompt">
                     How did you hear about Go Full Circle?
                   </legend>
                   <p className="explanatory-note">(Select all that apply)</p>
                   {howDidYouHearList.map((medium, idx) => (
-                    <div className="option-label-pair" key={`mediumOption${idx}`}>
+                    <div
+                      className="option-label-pair"
+                      key={`mediumOption${idx}`}
+                    >
                       <input
                         type="checkbox"
                         name="HowDidYouHear"
@@ -395,7 +410,11 @@ export default function Webform() {
                     </div>
                   ))}
                   <div className="option-label-othertext">
-                    <input type="checkbox" name="HowDidYouHear" id="mediumOptionOther" />
+                    <input
+                      type="checkbox"
+                      name="HowDidYouHear"
+                      id="mediumOptionOther"
+                    />
                     <label htmlFor="mediumOptionOther" key={`mediumLabelOther`}>
                       Other
                     </label>
@@ -405,6 +424,43 @@ export default function Webform() {
                       onChange={(e) => setValueOf(e, "mediumOptionOther")}
                     />
                   </div>
+                </fieldset>
+              </div> */}
+
+              <div className="question dropdown-with-other mb-3">
+                <fieldset>
+                  <label
+                    htmlFor="HowDidYouHear"
+                    className="prompt multi-choice-prompt"
+                  >
+                    How did you hear about Go Full Circle?
+                  </label>
+                  <select
+                    required
+                    defaultValue={"DEFAULT"}
+                    name="HowDidYouHear"
+                    onChange={(e) => otherSelectOption(e, "otherHowDidYouHear")}
+                  >
+                    <option disabled value="DEFAULT" className="select-option">
+                      Please select
+                    </option>
+                    {howDidYouHearList.map((medium, idx) => (
+                      <option
+                        value={medium}
+                        className="select-option"
+                        key={`mediumOption${idx}`}
+                      >
+                        {medium}
+                      </option>
+                    ))}
+                  </select>
+                  <input
+                    name="HowDidYouHear"
+                    className="select-other-option-text hidden"
+                    type="text"
+                    id="otherHowDidYouHear"
+                    placeholder="Please specify"
+                  ></input>
                 </fieldset>
               </div>
 
@@ -448,8 +504,15 @@ export default function Webform() {
                 <b>Apply now</b>
               </button>
               <p>
-                <b>Please note</b>: Places are limited. The Go Full Circle team will
-                notify you of the outcome of your application.
+                <b>Please note</b>: Places are limited. The Go Full Circle team
+                will notify you of the outcome of your application.
+              </p>
+              <p>
+                <b>Privacy Policy Statement</b><br/>Your information will not be
+                made available to any third-party organisations or websites
+                except where required under applicable law or for the purposes
+                of maintaining communication with and delivering Course content
+                to you in relation to the Go Full Circle program.
               </p>
             </div>
           </div>
