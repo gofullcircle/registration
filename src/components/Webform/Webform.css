@@ -1,11 +1,11 @@
 .Webform .form-section {
   border-radius: 10px;
-  background: rgb(200, 216, 200);
+  background: #BBE0CA;
 }
 
 .Webform .section-header {
   border-radius: 10px 10px 0 0;
-  background: rgb(169, 193, 169);
+  background: #78C8A7;
 }
 
 .Webform .section-title {
@@ -66,4 +66,9 @@
 .Webform fieldset .option-label-othertext input[type="text"]{
   /* flex-grow: 1; */
   margin-left: 0.5em;
+}
+
+.Webform #submit-button {
+  background: #005344;
+  border-color: #21A07C;
 }

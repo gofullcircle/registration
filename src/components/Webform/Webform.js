@@ -445,7 +445,7 @@ export default function Webform() {
                 id="submit-button"
                 type="submit"
               >
-                Apply now
+                <b>Apply now</b>
               </button>
               <p>
                 <b>Please note</b>: Places are limited. The Go Full Circle team will

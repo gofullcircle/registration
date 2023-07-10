@@ -1,6 +1,6 @@
 import React from "react"
 import "./Footer.css"
-import CoMlogo from "../../CoMlogo.jpg"
+import CoMlogo from "../../CoMtransparent.png"
 import CoSlogo from "../../CoStransparent.png"
 import CoBlogo from "../../CoBtransparent.png"
 import CdSlogo from "../../CdSlogo.png"
@@ -10,7 +10,7 @@ export default function Footer() {
     <div className="Footer">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 h-25 logos mt-5 d-flex justify-content-center flex-wrap">
+          <div className="col-lg-6 logos mt-5 d-flex justify-content-center flex-wrap">
             <a
               href="https://www.melbourne.vic.gov.au/Pages/home.aspx"
               target="_blank"
@@ -53,7 +53,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="col-lg-6 acknowledgement mt-5 h-100">
-            <i>
+            <p>
               We acknowledge the Traditional Owners and their Elders past and
               present as the original custodians of Victoria’s land and waters
               and recognise their enduring connection to the people, soil,
@@ -66,7 +66,7 @@ export default function Footer() {
               embody healthy country and healthy people. Through this knowledge
               sharing program we aim to improve the balance and respect for
               nature.
-            </i>
+            </p>
           </div>
         </div>
       </div>

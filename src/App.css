@@ -1,5 +1,6 @@
 .App {
   text-align: left;
+  font-family: Montserrat, sans-serif;
 }
 
 header {
@@ -7,6 +8,8 @@ header {
   background-size: cover;
   background-position: center;
   height: 35vw;
-  min-height: 100px;
+  min-height: 150px;
   max-height: min(40vh, 300px);
+  max-width: 1800px;
+  margin: auto;
 }
