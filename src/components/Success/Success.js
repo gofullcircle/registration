@@ -20,7 +20,7 @@ export default function Success() {
           <p>
             If you haven’t signed up already, we highly recommend that you
             attend the 75 min virtual information session on{" "}
-            <b>Wed 2nd August 2023</b> from
+            <b>Wed 2nd August 2023</b> from{" "}
             <b>3:00pm to 4:15pm</b> via zoom. Join us to learn more about the
             circular economy and how Go Full Circle will support you to apply it
             to your business.
@@ -40,32 +40,6 @@ export default function Success() {
             </a>
           </div>
           <br />
-          <br />
-          <br />
-          <p>
-            <b>
-              To participate in the Go Full Circle 2023 course, participants
-              should have the following:
-            </b>
-          </p>
-          <ul>
-            <li>
-              Ability to commit to approximately 5-6 hrs per/week, totalling
-              40-50 hours across the 8 week course
-            </li>
-            <li>
-              Ability to join the 4 virtual group sessions (see times above)
-            </li>
-            <li>
-              Support of leadership to action initiative plans within the
-              participant's organisation (if the participant is not the business
-              owner)
-            </li>
-            <li>
-              Stable internet, and a computer or tablet with a microphone and
-              camera that can support <a href="https://zoom.us/">Zoom</a>
-            </li>
-          </ul>
           <br />
           <br />
           <b>WHAT PAST PARTICIPANTS HAVE SAID ABOUT GO FULL CIRCLE:</b>

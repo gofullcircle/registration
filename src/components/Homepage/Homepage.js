@@ -52,22 +52,22 @@ export default function Homepage() {
                 <br />
                 <br />
                 Each participant will be provided with a one-hour 1 on 1 session
-                with a course facilitator to provide additional assistance
+                with a program facilitator to provide additional assistance
                 throughout their learning journey. 1 on 1 sessions are available
-                in the second half of the course, and will be confirmed on an
+                in the second half of the program, and will be confirmed on an
                 individual basis.
               </p>
 
               <br></br>
 
-              <h3>Who is this course for?</h3>
+              <h3>Who is this program for?</h3>
               <ul>
                 <li>
                   For businesses located in Melbourne, Stonnington or Boroondara
                   Council Area(s)
                 </li>
                 <li>
-                  This course is designed for owners or staff with the ability
+                  This program is designed for owners or staff with the ability
                   to implement new practices in their business
                 </li>
                 <li>
@@ -84,7 +84,7 @@ export default function Homepage() {
 
               <br></br>
 
-              <h3>Reasons to do this course:</h3>
+              <h3>Reasons to join this program:</h3>
               <div className="reason">
                 <b className="reason-header">Ignite Innovation</b>
                 <p className="reason-text">

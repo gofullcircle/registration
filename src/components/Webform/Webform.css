@@ -1,6 +1,17 @@
+.Webform .h1-container,.homepage-link {
+  width: min(100%, 1800px);
+  max-width: 1800px;
+  margin: auto;
+}
+
+.Webform .gfc-form {
+  max-width: 1800px;
+}
+
 .Webform .form-section {
   border-radius: 10px;
   background: #BBE0CA;
+  max-width: 1000px;
 }
 
 .Webform .section-header {
@@ -80,4 +91,5 @@
 .Webform #submit-button {
   background: #005344;
   border-color: #21A07C;
+  max-width: 250px;
 }

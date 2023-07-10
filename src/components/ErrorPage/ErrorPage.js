@@ -11,6 +11,7 @@ export default function ErrorPage() {
           <h1>Error</h1>
           <p>
             There was an error submitting the form. We apologise for any inconvenience.<br/><br/>
+            Please check that your device has a stable internet connection.<br/><br/>
             If this problem persists, please email gofullcircletraining [at] gmail.com
           </p>
           <Link className="btn btn-outline-primary" to="/">

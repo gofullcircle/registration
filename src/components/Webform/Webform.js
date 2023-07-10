@@ -74,9 +74,12 @@ export default function Webform() {
       <header></header>
 
       <div className="form-content m-0 p-0">
-        <h1 className="h1 m-3 mb-5">
-          Apply to join the Go Full Circle 2023 course
-        </h1>
+        <div className="h1-container">
+          <h1 className="h1 m-3 mb-5">
+            Apply to join the Go Full Circle 2023 program
+          </h1>
+        </div>
+
         <form
           className="gfc-form col-12 col-md-10 col-lg-8 col-xlg-6 m-auto"
           id="gfc-form"
@@ -361,7 +364,7 @@ export default function Webform() {
               <div className="question multi-choice-with-other mb-3">
                 <fieldset>
                   <legend className="prompt multi-choice-prompt">
-                    What I hope to get out of the Go Full Circle course:
+                    What I hope to get out of the Go Full Circle program:
                   </legend>
                   <p className="explanatory-note">(Select all that apply)</p>
                   {goalsList.map((goal, idx) => (
@@ -491,7 +494,7 @@ export default function Webform() {
             <div className="section-header">
               <h3 className="section-title">Join the community!</h3>
             </div>
-            <div className="questions-container">
+            <div className="questions-container question">
               <p>
                 Thanks for your interest in applying for the Go Full Circle 2023
                 program. Click 'apply now' when you have completed the form.
@@ -508,16 +511,20 @@ export default function Webform() {
                 will notify you of the outcome of your application.
               </p>
               <p>
-                <b>Privacy Policy Statement</b><br/>Your information will not be
-                made available to any third-party organisations or websites
-                except where required under applicable law or for the purposes
-                of maintaining communication with and delivering Course content
-                to you in relation to the Go Full Circle program.
+                <b>Privacy Policy Statement</b>
+                <br />
+                Your information will not be made available to any third-party
+                organisations or websites except where required under applicable
+                law or for the purposes of maintaining communication with and
+                delivering program content to you in relation to the Go Full
+                Circle program.
               </p>
             </div>
           </div>
         </form>
-        <Link to="/">Back to homepage</Link>
+        <div className="homepage-link">
+          <Link to="/">Back to homepage</Link>
+        </div>
       </div>
     </div>
   )
