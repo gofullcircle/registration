@@ -135,8 +135,9 @@ export default function Homepage() {
               <p className="intro-copy justify">
                 Join us in reshaping the future of business, as we empower you
                 to embrace the circular economy and propel your company to
-                better practices. Enrol in the Go Full Circle program today and unlock boundless
-                possibilities for a brighter, sustainable tomorrow!
+                better practices. Apply for the Go Full Circle program today and
+                unlock boundless possibilities for a brighter, sustainable
+                tomorrow!
               </p>
 
               <div className="actions">
@@ -144,7 +145,7 @@ export default function Homepage() {
                   className="btn btn-primary"
                   onClick={() => navigate("/signup")}
                 >
-                  Register now
+                  Apply now
                 </button>
               </div>
             </div>

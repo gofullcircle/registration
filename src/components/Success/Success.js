@@ -10,10 +10,12 @@ export default function Success() {
         <div className="success-message mt-5">
           <h1>Success!</h1>
           <p>
-            Thank you for registering your interest in the Go Full Circle 2023
+            Thank you for applying to participate in the Go Full Circle 2023
             program, which is a partnered program between the City of Melbourne,
             City of Boroondara and City of Stonnington, supported by{" "}
-            <a href="http://www.cirquedusoil.com.au/">Cirque du Soil</a>.
+            <a href="http://www.cirquedusoil.com.au/">Cirque du Soil</a>. Please
+            note that places are limited; The Go Full Circle team will notify
+            you of the outcome of your application.
           </p>
           <p>
             If you haven’t signed up already, we highly recommend that you

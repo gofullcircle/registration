@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import goalsList from "./goalsList"
+import howDidYouHearList from "./howDidYouHearList"
 
 import "./Webform.css"
 
@@ -13,6 +14,7 @@ export default function Webform() {
     var otherButton = document.getElementById(targetElement)
     otherButton.checked = true
     sourceElement.target.classList.remove("inactive")
+    sourceElement.target.required = true
     otherButton.value = sourceElement.target.value
   }
 
@@ -61,7 +63,7 @@ export default function Webform() {
 
       <div className="form-content m-0 p-0">
         <h1 className="h1 m-3 mb-5">
-          Register your interest in the Go Full Circle 2023 course
+          Apply to join the Go Full Circle 2023 course
         </h1>
         <form
           className="gfc-form col-12 col-md-10 col-lg-8 col-xlg-6 m-auto"
@@ -268,10 +270,10 @@ export default function Webform() {
                 </fieldset>
               </div>
 
-              <div className="question one-choice-with-other mb-3">
+              <div className="question one-choice mb-3">
                 <fieldset>
                   <legend className="prompt multi-choice-prompt">
-                    Business location (LGA)
+                    Business location
                   </legend>
 
                   <div className="option-label-pair">
@@ -281,9 +283,9 @@ export default function Webform() {
                       name="LGA"
                       id="Boroondara"
                       value="Boroondara"
-                      onClick={() => removeRequired("inputOtherLGA")}
+                      // onClick={() => removeRequired("inputOtherLGA")}
                     />
-                    <label htmlFor="Boroondara">City of Boroondara LGA</label>
+                    <label htmlFor="Boroondara">City of Boroondara</label>
                   </div>
                   <div className="option-label-pair">
                     <input
@@ -292,9 +294,9 @@ export default function Webform() {
                       name="LGA"
                       id="Melbourne"
                       value="Melbourne"
-                      onClick={() => removeRequired("inputOtherLGA")}
+                      // onClick={() => removeRequired("inputOtherLGA")}
                     />
-                    <label htmlFor="Melbourne">City of Melbourne LGA</label>
+                    <label htmlFor="Melbourne">City of Melbourne</label>
                   </div>
                   <div className="option-label-pair">
                     <input
@@ -303,11 +305,11 @@ export default function Webform() {
                       name="LGA"
                       id="Stonnington"
                       value="Stonnington"
-                      onClick={() => removeRequired("inputOtherLGA")}
+                      // onClick={() => removeRequired("inputOtherLGA")}
                     />
-                    <label htmlFor="Stonnington">City of Stonnington LGA</label>
+                    <label htmlFor="Stonnington">City of Stonnington</label>
                   </div>
-                  <div className="option-label-othertext">
+                  {/* <div className="option-label-othertext">
                     <input
                       // this element's `value` will be set by the text input below
                       required
@@ -330,7 +332,7 @@ export default function Webform() {
                         setValueOf(e, "otherLGA", "Please specify")
                       }
                     />
-                  </div>
+                  </div> */}
                 </fieldset>
               </div>
             </div>
@@ -342,12 +344,14 @@ export default function Webform() {
                 Participating in Go Full Circle 2023
               </h3>
             </div>
+
             <div className="questions-container">
               <div className="question multi-choice-with-other mb-3">
                 <fieldset>
                   <legend className="prompt multi-choice-prompt">
                     What I hope to get out of the Go Full Circle course:
                   </legend>
+                  <p className="explanatory-note">(Select all that apply)</p>
                   {goalsList.map((goal, idx) => (
                     <div className="option-label-pair" key={`goalOption${idx}`}>
                       <input
@@ -373,117 +377,32 @@ export default function Webform() {
                 </fieldset>
               </div>
 
-              <div className="question one-choice-with-other mb-3">
+              <div className="question multi-choice-with-other mb-3">
                 <fieldset>
                   <legend className="prompt multi-choice-prompt">
                     How did you hear about Go Full Circle?
                   </legend>
-
-                  <div className="option-label-pair">
-                    <input
-                      required
-                      type="radio"
-                      name="HowDidYouHear"
-                      id="BoroondaraWebsite"
-                      value="City of Boroondara website"
-                      onClick={() => removeRequired("inputOtherHowDidYouHear")}
-                    />
-                    <label htmlFor="BoroondaraWebsite">
-                      City of Boroondara website
-                    </label>
-                  </div>
-                  <div className="option-label-pair">
-                    <input
-                      required
-                      type="radio"
-                      name="HowDidYouHear"
-                      id="MelbourneWebsite"
-                      value="City of Melbourne website"
-                      onClick={() => removeRequired("inputOtherHowDidYouHear")}
-                    />
-                    <label htmlFor="MelbourneWebsite">
-                      City of Melbourne website
-                    </label>
-                  </div>
-                  <div className="option-label-pair">
-                    <input
-                      required
-                      type="radio"
-                      name="HowDidYouHear"
-                      id="StonningtonWebsite"
-                      value="City of Stonnington website"
-                      onClick={() => removeRequired("inputOtherHowDidYouHear")}
-                    />
-                    <label htmlFor="StonningtonWebsite">
-                      City of Stonnington website
-                    </label>
-                  </div>
-                  <div className="option-label-pair">
-                    <input
-                      required
-                      type="radio"
-                      name="HowDidYouHear"
-                      id="Facebook"
-                      value="Facebook"
-                      onClick={() => removeRequired("inputOtherHowDidYouHear")}
-                    />
-                    <label htmlFor="Facebook">Facebook</label>
-                  </div>
-                  <div className="option-label-pair">
-                    <input
-                      required
-                      type="radio"
-                      name="HowDidYouHear"
-                      id="Instagram"
-                      value="Instagram"
-                      onClick={() => removeRequired("inputOtherHowDidYouHear")}
-                    />
-                    <label htmlFor="Instagram">Instagram</label>
-                  </div>
-                  <div className="option-label-pair">
-                    <input
-                      required
-                      type="radio"
-                      name="HowDidYouHear"
-                      id="Newsletter"
-                      value="Newsletter"
-                      onClick={() => removeRequired("inputOtherHowDidYouHear")}
-                    />
-                    <label htmlFor="Newsletter">Newsletter</label>
-                  </div>
-                  <div className="option-label-pair">
-                    <input
-                      required
-                      type="radio"
-                      name="HowDidYouHear"
-                      id="CirqueDuSoil"
-                      value="Cirque du Soil"
-                      onClick={() => removeRequired("inputOtherHowDidYouHear")}
-                    />
-                    <label htmlFor="CirqueDuSoil">Cirque du Soil</label>
-                  </div>
+                  <p className="explanatory-note">(Select all that apply)</p>
+                  {howDidYouHearList.map((medium, idx) => (
+                    <div className="option-label-pair" key={`mediumOption${idx}`}>
+                      <input
+                        type="checkbox"
+                        name="HowDidYouHear"
+                        id={`mediumOption${idx}`}
+                        value={medium}
+                      />
+                      <label htmlFor={`mediumOption${idx}`}>{medium}</label>
+                    </div>
+                  ))}
                   <div className="option-label-othertext">
+                    <input type="checkbox" name="HowDidYouHear" id="mediumOptionOther" />
+                    <label htmlFor="mediumOptionOther" key={`mediumLabelOther`}>
+                      Other
+                    </label>
                     <input
-                      // this element's `value` will be set by the text input below
-                      required
-                      type="radio"
-                      name="HowDidYouHear"
-                      id="otherHowDidYouHear"
-                      onClick={() =>
-                        setRequired("inputOtherHowDidYouHear", "Please specify")
-                      }
-                    />
-                    <label htmlFor="otherHowDidYouHear">Other</label>
-                    <input
-                      // this text input sets the `value` of the "Other" radio button
-                      id="inputOtherHowDidYouHear"
-                      className="inactive"
                       type="text"
-                      title="How did you hear about Go Full Circle?"
-                      name="HowDidYouHear"
-                      onChange={(e) =>
-                        setValueOf(e, "otherHowDidYouHear", "Please specify")
-                      }
+                      id="inputOtherMedium"
+                      onChange={(e) => setValueOf(e, "mediumOptionOther")}
                     />
                   </div>
                 </fieldset>
@@ -492,20 +411,19 @@ export default function Webform() {
               <div className="question one-choice mb-3">
                 <fieldset>
                   <legend className="prompt multi-choice-prompt">
-                    Time commitment
+                    Attend the information session
                   </legend>
                   <div className="option-label-pair">
                     <input
-                      required
                       type="checkbox"
-                      name="Agree"
-                      id="Agree"
+                      name="SignUpForInfoSession"
+                      id="SignUpForInfoSession"
                       value="Yes"
                     />
-                    <label htmlFor="Agree">
-                      I am able to commit 5-6 hrs per week (totalling 40-50
-                      hours across the entire 8 week course) to participate in
-                      Go Full Circle, as detailed in the course description
+                    <label htmlFor="SignUpForInfoSession">
+                      Register me for a free 75min virtual information session.
+                      This session will take place via Zoom on Wed 2nd Aug 2023
+                      at 3:00 pm AEST.
                     </label>
                   </div>
                 </fieldset>
@@ -519,17 +437,20 @@ export default function Webform() {
             </div>
             <div className="questions-container">
               <p>
-                Thanks for your interest in Go Full Circle 2023. Click 'register
-                me' when you have completed the form.
+                Thanks for your interest in applying for the Go Full Circle 2023
+                program. Click 'apply now' when you have completed the form.
               </p>
               <button
                 className="btn btn-primary mb-3"
                 id="submit-button"
                 type="submit"
               >
-                Register me
+                Apply now
               </button>
-              <p>Thank you!</p>
+              <p>
+                <b>Please note</b>: Places are limited. The Go Full Circle team will
+                notify you of the outcome of your application.
+              </p>
             </div>
           </div>
         </form>
