@@ -1,0 +1,13 @@
+.Success #event-link-button {
+  background: #005344;
+  border-color: #21A07C;
+}
+
+.Success #home-link {
+  border-color: #21A07C;
+  color: #21A07C;
+}
+.Success #home-link:hover {
+  background: #005344;
+  color: white;
+}

@@ -31,6 +31,7 @@ export default function Success() {
             </p>
             <a
               className="btn btn-primary"
+              id="event-link-button"
               target="_blank"
               rel="noreferrer"
               href="https://events.humanitix.com/go-full-circle-2023-virtual-information-session"
@@ -98,7 +99,7 @@ export default function Success() {
           <p>The Go Full Circle Team</p>
           <br />
           <br />
-          <Link className="btn btn-outline-primary" to="/">
+          <Link className="btn btn-outline-primary" id="home-link" to="/">
             Home
           </Link>
         </div>

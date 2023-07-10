@@ -19,7 +19,7 @@ export default function Homepage() {
               <div className="title-container d-flex">
                 {/* <Logo display={"inline"} breakpoint={"md"} /> */}
                 <h1 className="h1 course-title m-auto p-3">
-                  Go Full Circle 2023
+                  <b>Go Full Circle 2023</b>
                 </h1>
               </div>
               <h2>
