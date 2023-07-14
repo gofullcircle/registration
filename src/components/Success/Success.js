@@ -1,6 +1,7 @@
 // import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import "./Success.css"
+import { OpenInNew } from "@mui/icons-material"
 
 export default function Success() {
   return (
@@ -20,10 +21,9 @@ export default function Success() {
           <p>
             If you haven’t signed up already, we highly recommend that you
             attend the 75 min virtual information session on{" "}
-            <b>Wed 2nd August 2023</b> from{" "}
-            <b>3:00pm to 4:15pm</b> via zoom. Join us to learn more about the
-            circular economy and how Go Full Circle will support you to apply it
-            to your business.
+            <b>Wed 2nd August 2023</b> from <b>3:00pm to 4:15pm</b> via zoom.
+            Join us to learn more about the circular economy and how Go Full
+            Circle will support you to apply it to your business. <br />
           </p>
           <div className="event-link">
             <p>
@@ -36,10 +36,19 @@ export default function Success() {
               rel="noreferrer"
               href="https://events.humanitix.com/go-full-circle-2023-virtual-information-session"
             >
-              Go Full Circle Virtual Info Session
+              Go Full Circle Virtual Info Session <OpenInNew fontSize="small" />
             </a>
           </div>
           <br />
+          <p>
+            <b>Please note</b>: If you ticked 'yes' to register for the
+            information session when you completed the registration form, you
+            will be automatically registered for this info session - no need to
+            do anything more. Please feel free to encourage other businesses to
+            visit{" "}
+            <a href="https://gofullcircle.training">gofullcircle.training</a>{" "}
+            and apply to join the program!
+          </p>
           <br />
           <br />
           <b>WHAT PAST PARTICIPANTS HAVE SAID ABOUT GO FULL CIRCLE:</b>
