@@ -1,7 +1,7 @@
 // import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import "./Success.css"
-import { OpenInNew } from "@mui/icons-material"
+// import { OpenInNew } from "@mui/icons-material"
 
 export default function Success() {
   return (
@@ -18,7 +18,7 @@ export default function Success() {
             note that places are limited; The Go Full Circle team will notify
             you of the outcome of your application.
           </p>
-          <p>
+          {/* <p>
             If you haven’t signed up already, we highly recommend that you
             attend the 75 min virtual information session on{" "}
             <b>Wed 2nd August 2023</b> from <b>3:00pm to 4:15pm</b> via zoom.
@@ -48,7 +48,7 @@ export default function Success() {
             visit{" "}
             <a href="https://gofullcircle.training">gofullcircle.training</a>{" "}
             and apply to join the program!
-          </p>
+          </p> */}
           <br />
           <br />
           <b>WHAT PAST PARTICIPANTS HAVE SAID ABOUT GO FULL CIRCLE:</b>

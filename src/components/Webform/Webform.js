@@ -8,14 +8,18 @@ import "./Webform.css"
 export default function Webform() {
   const navigate = useNavigate()
 
-  function setValueOf(sourceElement, targetElement) {
-    // sourceElement is the EVENT from the text input field corresponding to the "other" option
-    // targetElement is the "Other" radio/checkbox input button
+  function setValueOf(sourceEvent, targetElement) {
+    /* Sets the value of an 'other' checkbox/radio input element in response 
+       to user input into a separate text input field. Use for making a 
+       "A,B,C or Other" style set of user options.
+       `sourceEvent` is the onChange() event from the text input field.
+       `targetElement` is the "Other" radio/checkbox input button.
+    */
     var otherButton = document.getElementById(targetElement)
     otherButton.checked = true
-    sourceElement.target.classList.remove("inactive")
-    sourceElement.target.required = true
-    otherButton.value = sourceElement.target.value
+    sourceEvent.target.classList.remove("inactive")
+    sourceEvent.target.required = true
+    otherButton.value = sourceEvent.target.value
   }
 
   function setRequired(element, placeholderText = "") {
@@ -467,7 +471,7 @@ export default function Webform() {
                 </fieldset>
               </div>
 
-              <div className="question one-choice mb-3">
+              {/* <div className="question one-choice mb-3">
                 <fieldset>
                   <legend className="prompt multi-choice-prompt">
                     Attend the information session
@@ -486,7 +490,7 @@ export default function Webform() {
                     </label>
                   </div>
                 </fieldset>
-              </div>
+              </div> */}
             </div>
           </div>
 
