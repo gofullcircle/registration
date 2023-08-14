@@ -10,6 +10,12 @@
   margin-bottom: 0.5em;
 }
 
+.Homepage .video-embed {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 560 / 315;
+}
+
 .Homepage .reason-text {
   margin-left: 2em;
 }

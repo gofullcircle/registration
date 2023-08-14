@@ -58,7 +58,22 @@ export default function Homepage() {
                 individual basis.
               </p>
 
-              <br></br>
+              <br />
+              <br />
+
+              <iframe
+                className="video-embed"
+                // width="560"
+                // height="315"
+                src="https://www.youtube.com/embed/cFwwLeGW9Qc"
+                title="YouTube video - Go Full Circle program introduction"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+
+              <br />
+              <br />
 
               <h3>Who is this program for?</h3>
               <ul>
@@ -82,7 +97,22 @@ export default function Homepage() {
                 </li>
               </ul>
 
-              <br></br>
+              <br />
+              <br />
+
+              <iframe
+                className="video-embed"
+                // width="560"
+                // height="315"
+                src="https://www.youtube.com/embed/fyAkRXZRlSk"
+                title="YouTube video - Introduction to Circular Economy"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+
+              <br />
+              <br />
 
               <h3>Reasons to join this program:</h3>
               <div className="reason">
