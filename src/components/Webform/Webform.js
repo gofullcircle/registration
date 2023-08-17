@@ -1,5 +1,7 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import ClipLoader from "react-spinners/ClipLoader"
+
 import goalsList from "./goalsList"
 import howDidYouHearList from "./howDidYouHearList"
 
@@ -7,6 +9,7 @@ import "./Webform.css"
 
 export default function Webform() {
   const navigate = useNavigate()
+  const [submitted, setSubmitted] = useState(false)
 
   function setValueOf(sourceEvent, targetElement) {
     /* Sets the value of an 'other' checkbox/radio input element in response 
@@ -52,26 +55,43 @@ export default function Webform() {
     }
   }
 
+  /**  
+   * Posts form data then navigates to a success or failure page,
+   * depending on the server response.
+   * @param {SubmitEvent} e Form submit event
+   */
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    e.submitter.disabled = true // disable the submit button
+    setSubmitted(true)
+    const data = new FormData(e.target)
+    const action = e.target.action
+    fetch(action, {
+      method: "POST",
+      body: data,
+    })
+      .then(() => {
+        navigate("/success")
+      })
+      .catch((error) => {
+        console.log(error)
+        navigate("/error")
+      })
+  }
+
   useEffect(() => {
     const form = document.getElementById("gfc-form")
-    form.addEventListener("submit", function (e) {
-      e.preventDefault()
-      document.getElementById("submit-button").disabled = true
-      const data = new FormData(form)
-      const action = e.target.action
-      fetch(action, {
-        method: "POST",
-        body: data,
-      })
-        .then(() => {
-          navigate("/success")
-        })
-        .catch((error) => {
-          console.log(error)
-          navigate("/error")
-        })
-    })
-  }, [navigate])
+    if (form) {
+      form.addEventListener("submit", handleSubmit)
+    }
+
+    return () => {
+      if (form) {
+        form.removeEventListener("submit", handleSubmit)
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="Webform">
@@ -367,6 +387,8 @@ export default function Webform() {
             <div className="questions-container">
               <div className="question multi-choice-with-other mb-3">
                 <fieldset>
+                  {/* TODO: add validation - check if one option is selected */}
+                  {/* Eg: https://vyspiansky.github.io/2019/07/13/javascript-at-least-one-checkbox-must-be-selected/ */}
                   <legend className="prompt multi-choice-prompt">
                     What I hope to get out of the Go Full Circle program:
                   </legend>
@@ -508,7 +530,11 @@ export default function Webform() {
                 id="submit-button"
                 type="submit"
               >
-                <b>Apply now</b>
+                {submitted ? (
+                  <ClipLoader size={"1em"} color={"white"} />
+                ) : (
+                  <b>Apply now</b>
+                )}
               </button>
               <p>
                 <b>Please note</b>: Places are limited. The Go Full Circle team
