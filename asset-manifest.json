@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.27bde0da.css",
-    "main.js": "/static/js/main.3629f854.js",
+    "main.js": "/static/js/main.9a511bcc.js",
     "static/media/header1.png": "/static/media/header1.1ebeb0b01a3caf2ceea6.png",
     "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
     "static/media/CoStransparent.png": "/static/media/CoStransparent.7cfee60565e2989cc7d6.png",
@@ -10,10 +10,10 @@
     "static/media/CdSlogo.png": "/static/media/CdSlogo.e871d1e6cb0e281b82f2.png",
     "index.html": "/index.html",
     "main.27bde0da.css.map": "/static/css/main.27bde0da.css.map",
-    "main.3629f854.js.map": "/static/js/main.3629f854.js.map"
+    "main.9a511bcc.js.map": "/static/js/main.9a511bcc.js.map"
   },
   "entrypoints": [
     "static/css/main.27bde0da.css",
-    "static/js/main.3629f854.js"
+    "static/js/main.9a511bcc.js"
   ]
 }
