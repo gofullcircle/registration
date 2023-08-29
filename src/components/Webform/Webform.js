@@ -553,7 +553,7 @@ export default function Webform() {
           </div>
         </form>
         <div className="homepage-link">
-          <Link to="/">Back to homepage</Link>
+          <Link to="/">Back to Homepage</Link>
         </div>
       </div>
     </div>
