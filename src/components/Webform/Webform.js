@@ -5,6 +5,8 @@ import ClipLoader from "react-spinners/ClipLoader"
 import goalsList from "./goalsList"
 import howDidYouHearList from "./howDidYouHearList"
 
+import { ACCEPTING_ENROLMENTS, SHOW_WAITLIST } from "../Homepage/Homepage"
+
 import "./Webform.css"
 
 export default function Webform() {
@@ -55,7 +57,7 @@ export default function Webform() {
     }
   }
 
-  /**  
+  /**
    * Posts form data then navigates to a success or failure page,
    * depending on the server response.
    * @param {SubmitEvent} e Form submit event
@@ -93,7 +95,7 @@ export default function Webform() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return (
+  return ACCEPTING_ENROLMENTS ? (
     <div className="Webform">
       <header></header>
 
@@ -554,6 +556,174 @@ export default function Webform() {
         </form>
         <div className="homepage-link">
           <Link to="/">Back to Homepage</Link>
+        </div>
+      </div>
+    </div>
+  ) : /*
+        ------------------------------------------------------------------------
+        NOT ACCEPTING ENROLMENTS 
+        ------------------------------------------------------------------------
+      */
+  SHOW_WAITLIST ? (
+    /* 
+      ------------- WAITLIST OPEN ------------------
+    */
+    <div className="Webform">
+      <header></header>
+
+      <div className="form-content m-0 p-0">
+        <div className="h1-container">
+          <h1 className="h1 m-3 mb-5">
+            Register your interest in future Go Full Circle programs
+          </h1>
+        </div>
+
+        <form
+          className="gfc-form col-12 col-md-10 col-lg-8 col-xlg-6 m-auto"
+          id="gfc-form"
+          method="POST"
+          // This is the WAITLIST form action:
+          action="https://script.google.com/macros/s/AKfycbziVpp_u-R6oB-bT9B_dh0re0SKf0U2_i95Ee501s4OpEYZYckBDk6XsEumlJEiIqIY0w/exec"
+        >
+          <div className="my-details form-section m-3 mb-5">
+            <div className="section-header">
+              <h3 className="section-title">Your details</h3>
+            </div>
+            <div className="questions-container">
+              <div className="question short-text mb-3">
+                <label className="prompt short-text-prompt" htmlFor="FirstName">
+                  First name
+                </label>
+                <input
+                  required
+                  autoComplete="given-name"
+                  id="FirstName"
+                  name="FirstName"
+                  type="text"
+                  placeholder="First name"
+                  className="input-field text-input-field"
+                />
+              </div>
+
+              <div className="question short-text mb-3">
+                <label className="prompt short-text-prompt" htmlFor="LastName">
+                  Last name
+                </label>
+                <input
+                  required
+                  autoComplete="family-name"
+                  id="LastName"
+                  name="LastName"
+                  type="text"
+                  placeholder="Last name"
+                  className="input-field text-input-field"
+                />
+              </div>
+
+              <div className="question short-text mb-3">
+                <label className="prompt short-text-prompt" htmlFor="Phone">
+                  Phone
+                </label>
+                <input
+                  required
+                  autoComplete="tel-national"
+                  id="Phone"
+                  name="Phone"
+                  type="text"
+                  placeholder="Phone number"
+                  className="input-field text-input-field"
+                />
+              </div>
+
+              <div className="question short-text mb-3">
+                <label className="prompt short-text-prompt" htmlFor="Email">
+                  Email
+                </label>
+                <input
+                  required
+                  autoComplete="email"
+                  id="Email"
+                  name="Email"
+                  type="email"
+                  placeholder="your@email.address"
+                  className="input-field text-input-field"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="form-section submit-form m-3">
+            <div className="section-header">
+              <h3 className="section-title">Register your interest</h3>
+            </div>
+            <div className="questions-container question">
+              <p>
+                Thanks for your interest in the Go Full Circle program. We are
+                not currently accepting enrolments. Please press the button
+                below to register your interest, and we will notify you when
+                future program details are available.
+              </p>
+              <button
+                className="btn btn-primary mb-3"
+                id="submit-button"
+                type="submit"
+              >
+                {submitted ? (
+                  <ClipLoader size={"1em"} color={"white"} />
+                ) : (
+                  <b>Register interest</b>
+                )}
+              </button>
+              <br />
+              <br />
+              <p>
+                <b>Privacy Policy Statement</b>
+                <br />
+                Your information will not be made available to any third-party
+                organisations or websites except where required under applicable
+                law or for the purposes of maintaining communication with and
+                delivering program content to you in relation to the Go Full
+                Circle program.
+              </p>
+            </div>
+          </div>
+        </form>
+        <div className="homepage-link">
+          <Link to="/">Back to Homepage</Link>
+        </div>
+      </div>
+    </div>
+  ) : (
+    /* 
+      ------------- WAITLIST CLOSED ---------------
+    */
+    <div className="Webform">
+      <header></header>
+
+      <div className="form-content m-0 p-0">
+        <div className="h1-container">
+          <h1 className="h1 m-3 mb-5">
+            The Go Full Circle program is currently closed
+          </h1>
+        </div>
+
+        <div className="gfc-form col-12 col-md-10 col-lg-8 col-xlg-6 m-auto">
+          <div className="my-details form-section m-3 mb-5">
+            <div className="questions-container">
+              <b>Thanks for your interest!</b>
+              <p>
+                We are not currently accepting enrolments for Go Full Circle.
+              </p>
+              <p>
+                Please check back again in future for details of upcoming
+                programs.
+              </p>
+              <div className="homepage-link">
+                <Link to="/">Back to Homepage</Link>
+              </div>
+            </div>
+          </div>
+          <div className="spacer"></div>
         </div>
       </div>
     </div>

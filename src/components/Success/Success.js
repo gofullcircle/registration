@@ -1,10 +1,11 @@
 // import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import "./Success.css"
-// import { OpenInNew } from "@mui/icons-material"
+
+import { ACCEPTING_ENROLMENTS, SHOW_WAITLIST } from "../Homepage/Homepage"
 
 export default function Success() {
-  return (
+  return ACCEPTING_ENROLMENTS ? (
     <div className="Success">
       <header></header>
       <div className="container">
@@ -85,6 +86,87 @@ export default function Success() {
           <Link className="btn btn-outline-primary" id="home-link" to="/">
             Home
           </Link>
+        </div>
+      </div>
+    </div>
+  ) : SHOW_WAITLIST ? (
+    <div className="Success">
+      <header></header>
+      <div className="container">
+        <div className="success-message mt-5">
+          <h1>Success!</h1>
+          <p>
+            Thank you for registering your interest in future Go Full Circle
+            programs. Our team will be in touch when program details are
+            available.
+          </p>
+          <br />
+          <br />
+          <b>WHAT PAST PARTICIPANTS HAVE SAID ABOUT GO FULL CIRCLE:</b>
+          <i>
+            <blockquote>
+              “We joined Go Full Circle to understand what circular economy best
+              practices are, as well as hear and share what other businesses are
+              focusing on.”
+            </blockquote>
+            <blockquote>
+              “Go Full Circle gave us the opportunity for growth and
+              networking.”
+            </blockquote>
+            <blockquote>
+              “This program posed an opportunity for us to engage with experts
+              in the Circular Economy field, build relationships with fellow
+              businesses and speak directly to representatives of local
+              government. It felt like a safe and constructive place to discuss
+              our challenges.”
+            </blockquote>
+            <blockquote>
+              “Awesome to meet other participants and network and also great to
+              see and chat with speakers. Have already created so many more
+              exponential actions and learnings and feel inspired that we can
+              all make a difference.”
+            </blockquote>
+          </i>
+          <br />
+          <p>We look forward to meeting you in future!</p>
+
+          <p>The Go Full Circle Team</p>
+          <br />
+          <br />
+          <Link className="btn btn-outline-primary" id="home-link" to="/">
+            Home
+          </Link>
+        </div>
+      </div>
+    </div>
+  ) : (
+    // --------------------- No waitlist -----------------------------
+    <div className="Success">
+      <header></header>
+      <div className="container">
+        <div className="h1-container">
+          <h1 className="h1 m-3 mb-5">
+            The Go Full Circle program is currently closed
+          </h1>
+        </div>
+
+        <div className="msg-container col-12 col-md-10 col-lg-8 col-xlg-6 m-auto">
+          <div className="highlight m-3 mb-5">
+            <div className="content">
+              <b>Thanks for your interest!</b>
+              <p>
+                We are not currently accepting enrolments for Go Full Circle.
+              </p>
+              <p>
+                Please check back again in future for details of upcoming
+                programs.
+              </p>
+              <div className="homepage-link">
+                <Link to="/">Back to Homepage</Link>
+              </div>
+            </div>
+          </div>
+          <div className="spacer"></div>
         </div>
       </div>
     </div>

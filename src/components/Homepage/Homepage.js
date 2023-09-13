@@ -3,9 +3,14 @@ import { useNavigate } from "react-router-dom"
 
 import "./Homepage.css"
 
+// Adjust these constants in response to program status
+export const ACCEPTING_ENROLMENTS = false
+export const SHOW_WAITLIST = true // If not accepting enrolments, show a web form for leaving details
+
 export default function Homepage() {
   const navigate = useNavigate()
-  return (
+
+  return ACCEPTING_ENROLMENTS ? (
     <div className="Homepage">
       <header></header>
       <div className="container">
@@ -26,7 +31,7 @@ export default function Homepage() {
                 Unleash the Power of the Circular Economy: Adapting Your
                 Business for the Future
               </h2>
-              <br></br>
+              <br /><br />
               <h3>About the program:</h3>
               <p className="intro-copy justify">
                 Introducing the Go Full Circle program, a tailor-made program
@@ -160,7 +165,7 @@ export default function Homepage() {
                   the face of ever-changing requirements.
                 </p>
               </div>
-              <br></br>
+              <br /><br />
               <p className="intro-copy justify">
                 Join us in reshaping the future of business, as we empower you
                 to embrace the circular economy and propel your company to
@@ -181,6 +186,74 @@ export default function Homepage() {
             </div>
           </div>
           <div className="d-none d-md-block col-md-1 col-lg-2"></div>
+        </div>
+      </div>
+    </div>
+  ) : (
+    // -------------------- NOT ACCEPTING ENROLMENTS ---------------------------
+    <div className="Homepage">
+      <header></header>
+      <div className="container">
+        <div className="row">
+          <div className="d-none d-md-block col-md-1 col-lg-2"></div>
+          <div className="col-12 col-md-10 col-lg-8">
+            <div className="course-description">
+              <div className="title-container d-flex">
+                <h1 className="h1 course-title m-auto p-3">
+                  <b>Go Full Circle 2023 is now closed</b>
+                </h1>
+              </div>
+              <br /><br />
+
+              {SHOW_WAITLIST ? (
+                <>
+                  <h3>Register your interest in future programs</h3>
+                  <br /><br />
+                  <p className="intro-copy justify">
+                    We are no longer accepting enrolments for the Go Full Circle
+                    program. If you would like to register your interest in
+                    future programs, please follow the link below to join our
+                    waitlist:
+                  </p>
+                  <div className="actions">
+                    <button
+                      className="btn btn-primary"
+                      id="apply-now-button"
+                      onClick={() => navigate("/signup")}
+                    >
+                      Join waitlist
+                    </button>
+                  </div>
+                  <br />
+                  <p className="intro-copy justify">
+                    Our team will be in touch when future program details become
+                    available.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h3>Please check back in future</h3>
+                  <br />
+                  <br />
+                  <p className="intro-copy justify">
+                    We are no longer accepting enrolments for the Go Full Circle
+                    program. Please check back here in future, as details of
+                    further programs are made available.
+                  </p>
+                  <br />
+                  <br />
+                  <br />
+                  <p className="intro-copy justify">
+                    The Go Full Circle team.
+                  </p>
+
+                  <br />
+                  <br />
+                </>
+              )}
+              <div className="spacer"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

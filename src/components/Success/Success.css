@@ -11,3 +11,22 @@
   background: #005344;
   color: white;
 }
+
+.Success .msg-container {
+  max-width: 1800px;
+}
+
+.Success .highlight {
+  border-radius: 10px;
+  background: #BBE0CA;
+  max-width: 1000px;
+}
+
+.Success .content {
+  padding: 20px;
+  margin-left: 1em;
+}
+
+.Success .spacer {
+  height: 12rem;
+}
